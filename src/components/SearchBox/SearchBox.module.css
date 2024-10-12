@@ -1,0 +1,24 @@
+.search {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    text-align: center;
+    backdrop-filter: blur(2px);
+
+}
+.input {
+    border-radius: 5px;
+    background-color: rgb(224, 221, 221);
+    outline: none;
+    text-align: center;
+    padding-block: 5px;
+    border: none;
+    caret-color: #25d366;
+    transition:box-shadow 300ms linear;
+
+}
+.input:focus{
+    box-shadow: 2px 2px 3px #25d366;
+    transition:box-shadow 300ms linear
+
+}

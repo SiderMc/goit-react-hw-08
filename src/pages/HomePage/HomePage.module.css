@@ -1,0 +1,14 @@
+.home__page_content{
+    background-color: #103928;
+    width: 100%;
+    min-height: calc(100dvh - 43px);
+}
+.hero__title{
+    padding: 50px 0 30px 0 ;
+    color: #ffffff;
+    text-align: center;
+}
+.hero__sub_title{
+    color: #ffffff;
+    text-align: center;
+}

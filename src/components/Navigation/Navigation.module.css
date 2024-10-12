@@ -1,0 +1,14 @@
+.navigation{
+  display: flex;
+  gap: 50px;
+}
+.nav__menu{
+  color: #000000;
+  font-weight: 600;
+  padding: 10px 20px;
+  transition: color 300ms linear;
+}
+.nav__menu:hover{
+  transition: color 300ms linear;
+  color:#ffffff
+}

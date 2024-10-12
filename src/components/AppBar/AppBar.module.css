@@ -1,0 +1,23 @@
+.header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #25d366;
+  padding-block: 10px;
+}
+.logo {
+  padding: 5px;
+}
+.logo::before {
+  content: "MyC";
+  display: block;
+  background-color: #103928;
+  width: 40px;
+  height: 30px;
+  border-radius: 50%;
+  color: #25d366;
+  font-weight: 600;
+display: flex;
+justify-content: center;
+align-items: center;
+}
