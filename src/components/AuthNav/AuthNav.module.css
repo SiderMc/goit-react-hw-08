@@ -3,3 +3,15 @@
   align-items: center;
   gap: 10px;
 }
+
+.link{
+  color: #2a363b;
+  font-weight: 600;
+  padding: 10px 20px;
+  transition: color 300ms linear;
+  font-weight: 700;
+}
+.link:hover {
+  transition: color 300ms linear;
+  color: #ffffff;
+}

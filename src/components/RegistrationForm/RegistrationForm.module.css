@@ -17,6 +17,7 @@
   border: none;
   caret-color: #25d366;
   transition: box-shadow 300ms linear;
+  background-color: rgb(232, 240, 254);
 }
 .form span {
   color: red;
