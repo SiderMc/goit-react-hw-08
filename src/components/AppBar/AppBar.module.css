@@ -1,9 +1,18 @@
 .header {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
   background-color: #25d366;
-  padding-block: 10px;
+  padding-block: 20px;
+  box-shadow: 2px 2px 7px #103928;
+}
+.container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding-inline: 15px;
+}
+.header__content {
+  display: flex;
+  gap: 20px;
+  align-items: center;
 }
 .logo {
   padding: 5px;
@@ -17,7 +26,7 @@
   border-radius: 50%;
   color: #25d366;
   font-weight: 600;
-display: flex;
-justify-content: center;
-align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

@@ -5,9 +5,17 @@
     width: 100%;
 }
 .contacts__list_item {
-    flex: 1 1 calc((100% - 20px) / 2);
+    flex: 1 1100%;
     border-radius: 10px;
     padding: 10px 15px;
     backdrop-filter: blur(2px);
     border: 2px solid lightgray;
+}
+.no__contacts {
+    display: inline-block;
+    padding: 5px 15px;
+    font-weight: 700;
+    color: #103928;
+    text-shadow: 1px 1px 1px #25d366;
+    backdrop-filter: blur(2px);
 }

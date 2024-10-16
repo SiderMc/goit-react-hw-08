@@ -1,22 +1,30 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { addContact,deleteContact, fetchContacts } from './operations';
+import {
+  addContact,
+  deleteContact,
+  fetchContacts,
+  updateContacts,
+} from './operations';
 import { logOut } from '../auth/operations';
 
 const initialState = {
   items: [],
   loading: false,
   error: false,
-  editContact:false
+  alert: {
+    show: false,
+    message: '',
+  },
 };
 
 const slice = createSlice({
   name: 'contacts',
   initialState,
   reducers: {
-
-    editContact:(state,action)=>{
-      state.editContact = action.payload
-    }
+    showMessage: (state, action) => {
+      state.alert.show = true;
+      state.alert.message = action.payload;
+    },
   },
   extraReducers: builder => {
     builder
@@ -44,6 +52,20 @@ const slice = createSlice({
         state.loading = false;
         state.error = true;
       })
+      .addCase(updateContacts.pending, state => {
+        state.loading = true;
+        state.error = false;
+      })
+      .addCase(updateContacts.fulfilled, (state, action) => {
+        state.loading = false;
+        state.items = state.items.map(contact =>
+          contact.id === action.payload.id ? action.payload : contact
+        );
+      })
+      .addCase(updateContacts.rejected, state => {
+        state.loading = false;
+        state.error = true;
+      })
       .addCase(deleteContact.pending, state => {
         state.loading = true;
         state.error = false;
@@ -57,10 +79,11 @@ const slice = createSlice({
       .addCase(deleteContact.rejected, state => {
         state.loading = false;
         state.error = true;
-      }).addCase(logOut.fulfilled,(state,action)=>{
-        return initialState
       })
+      .addCase(logOut.fulfilled, (state, action) => {
+        return initialState;
+      });
   },
 });
-
+export const { showMessage } = slice.actions;
 export const contactsReducer = slice.reducer;

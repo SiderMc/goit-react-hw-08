@@ -30,7 +30,7 @@ const authSlice = createSlice({
         state.isLoggedIn = true;
         state.isLoading = false;
       })
-      .addCase(logOut.fulfilled, (state) => {
+      .addCase(logOut.fulfilled, state => {
         return initialState;
       })
       .addCase(refreshUser.pending, state => {
@@ -41,7 +41,7 @@ const authSlice = createSlice({
         state.isRefreshing = false;
         state.isLoggedIn = true;
       })
-      .addCase(refreshUser.rejected, (state, action) => {
+      .addCase(refreshUser.rejected, (state) => {
         state.isRefreshing = false;
       })
       .addMatcher(isAnyOf(register.pending, logIn.pending), state => {
@@ -56,5 +56,4 @@ const authSlice = createSlice({
       );
   },
 });
-
 export const authSliceReducer = authSlice.reducer;

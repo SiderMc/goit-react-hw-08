@@ -41,19 +41,21 @@ export default function RegistrationForm() {
         <ErrorMessage component="span" name="name" />
         <label className={css.label}>
           Username
-          <Field type="text" name="name"  className={css.form__input} />
+          <Field type="text" name="name" className={css.form__input} />
         </label>
         <ErrorMessage component="span" name="email" />
         <label className={css.label}>
           Email
-          <Field type="email" name="email"  className={css.form__input} />
+          <Field type="email" name="email" className={css.form__input} />
         </label>
         <ErrorMessage component="span" name="password" />
         <label className={css.label}>
           Password
-          <Field type="password" name="password"  className={css.form__input}/>
+          <Field type="password" name="password" className={css.form__input} />
         </label>
-        <button className={css.button} type="submit">Register</button>
+        <button className={css.button} type="submit">
+          Register
+        </button>
       </Form>
     </Formik>
   );

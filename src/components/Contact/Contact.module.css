@@ -6,7 +6,8 @@
 }
 .contact {
     display: flex;
-gap: 10px;
+    gap: 10px;
+    align-items: center;
 }
 .contact__text {
     display: flex;
@@ -14,16 +15,16 @@ gap: 10px;
     gap: 10px;
 }
 
-.icon__btn{
+.icon__btn {
     display: block;
-width: 40px;
-height: 40px;
+    width: 40px;
+    height: 40px;
     border-radius: 30px;
 }
-.icon__btn *{
+.icon__btn * {
     display: block;
 }
-.contact__actions{
+.contact__actions {
     display: flex;
     gap: 10px;
     margin-left: auto;

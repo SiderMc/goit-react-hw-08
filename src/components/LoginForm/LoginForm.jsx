@@ -33,9 +33,11 @@ export default function LoginForm() {
         <ErrorMessage component="span" name="password" />
         <label className={css.label}>
           Password
-          <Field type="password" name="password" className={css.form__input}/>
+          <Field type="password" name="password" className={css.form__input} />
         </label>
-        <button className={css.button} type="submit">Log In</button>
+        <button className={css.button} type="submit">
+          Log In
+        </button>
       </Form>
     </Formik>
   );

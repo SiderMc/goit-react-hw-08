@@ -4,6 +4,7 @@ import * as Yup from 'yup';
 import { useId } from 'react';
 import { useDispatch } from 'react-redux';
 import { addContact } from '../../redux/contacts/operations';
+import { showMessage } from '../../redux/contacts/slice';
 
 export default function ContactForm() {
   const dispatch = useDispatch();
@@ -28,8 +29,8 @@ export default function ContactForm() {
   });
   const handleContacts = async (values, actions) => {
     dispatch(addContact(values));
+    dispatch(showMessage(`Contact ${values.name} added in your list`));
     actions.resetForm();
-    dispatch(openModal(false));
   };
 
   return (

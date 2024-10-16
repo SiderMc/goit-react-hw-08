@@ -4,7 +4,6 @@
     gap: 5px;
     text-align: center;
     backdrop-filter: blur(2px);
-
 }
 .input {
     border-radius: 5px;
@@ -14,11 +13,9 @@
     padding-block: 5px;
     border: none;
     caret-color: #25d366;
-    transition:box-shadow 300ms linear;
-
+    transition: box-shadow 300ms linear;
 }
-.input:focus{
+.input:focus {
     box-shadow: 2px 2px 3px #25d366;
-    transition:box-shadow 300ms linear
-
+    transition: box-shadow 300ms linear;
 }

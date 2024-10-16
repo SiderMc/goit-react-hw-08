@@ -7,12 +7,16 @@ import { selectIsLoggedIn } from '../../redux/auth/selectors';
 import { Link } from 'react-router-dom';
 
 export default function AppBar() {
-  const isLoggedIn = useSelector(selectIsLoggedIn)
+  const isLoggedIn = useSelector(selectIsLoggedIn);
   return (
     <header className={css.header}>
-      <Link className={css.logo} to="/"/>
-      <Navigation />
-      {isLoggedIn ? <UserMenu /> : <AuthNav />}
+      <div className={css.container}>
+        <div className={css.header__content}>
+          <Link className={css.logo} to="/" />
+          <Navigation />
+          {isLoggedIn ? <UserMenu /> : <AuthNav />}
+        </div>
+      </div>
     </header>
   );
 }

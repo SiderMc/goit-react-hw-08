@@ -17,9 +17,24 @@ export default function RoutesApp() {
     <Suspense fallback={null}>
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/register" element={<RestrictedRoute component={<RegisterPage />} redirectTo="/" />} />
-        <Route path="/login" element={<RestrictedRoute component={<LoginPage />} redirectTo="/contacts" />} />
-        <Route path="/contacts" element={<PrivateRoute component={<ContactsPage />} redirectTo="/login" />} />
+        <Route
+          path="/register"
+          element={
+            <RestrictedRoute component={<RegisterPage />} redirectTo="/" />
+          }
+        />
+        <Route
+          path="/login"
+          element={
+            <RestrictedRoute component={<LoginPage />} redirectTo="/contacts" />
+          }
+        />
+        <Route
+          path="/contacts"
+          element={
+            <PrivateRoute component={<ContactsPage />} redirectTo="/login" />
+          }
+        />
       </Routes>
     </Suspense>
   );

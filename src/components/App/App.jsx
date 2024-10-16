@@ -1,5 +1,4 @@
 import 'modern-normalize';
-import css from './App.module.css';
 import Layout from '../Layout/Layout';
 import RoutesApp from './App.routes';
 import { useEffect } from 'react';
@@ -10,6 +9,7 @@ import Loader from '../Loader/Loader';
 
 export default function App() {
   const dispatch = useDispatch();
+
   const isRefreshing = useSelector(selectIsRefreshing);
   useEffect(() => {
     dispatch(refreshUser());
@@ -18,7 +18,7 @@ export default function App() {
   return (
     <>
       {isRefreshing ? (
-        <Loader/>
+        <Loader />
       ) : (
         <Layout>
           <RoutesApp />

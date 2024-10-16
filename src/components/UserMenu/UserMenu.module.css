@@ -1,9 +1,9 @@
-.user__info{
+.user__info {
   display: flex;
   gap: 10px;
   align-items: center;
 }
-.button{
+.button {
   display: block;
   background-color: #ffffff;
   border-radius: 10px;
@@ -13,11 +13,11 @@
   transition: color 300ms linear;
   cursor: pointer;
 }
-.button:hover{
+.button:hover {
   color: #25d366;
   transition: color 300ms linear;
-
 }
 .username {
+  color: #2a363b;
   font-weight: 700;
 }
